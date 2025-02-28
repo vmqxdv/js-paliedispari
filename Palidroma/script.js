@@ -7,7 +7,7 @@
 
 */
 
-const userWord = prompt('Scrivi una parola per verificare che essa sia palindroma:');
+const userWord = prompt('Scrivi una parola per verificare che essa sia palindroma:').toLocaleLowerCase();
 
 const reversedUserWord = reverseString(userWord);
 
