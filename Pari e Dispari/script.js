@@ -16,10 +16,10 @@ function startNumGame(numType) {
 
   while (isGameInProgress) {
 
-    const userInput = Number(prompt('Inserisci un numero da 1 a 5:'));
+    const userNumInput = Number(prompt('Inserisci un numero da 1 a 5:'));
 
-    if (isNaN(userInput) || userInput > 5 || userInput < 1) {
-      alert(`Il numero "${userInput}", non è un numero valido. Riprova`);
+    if (isNaN(userNumInput) || userNumInput > 5 || userNumInput < 1) {
+      alert(`Il numero "${userNumInput}", non è un numero valido. Riprova`);
       continue;
     };
 
