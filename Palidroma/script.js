@@ -7,11 +7,17 @@
 
 */
 
-const userWord = prompt('Scrivi una parola per verificare che essa sia palindroma:').toLocaleLowerCase();
-
-const reversedUserWord = reverseString(userWord);
+const userWord = prompt('Scrivi una parola per verificare che essa sia palindroma:');
 
 
-function reverseString(string){
-  return string.split('').reverse().join('');
+if (isStringPalindrome(userWord)) alert(`Corretto! La parola "${userWord}" è palindroma!`);
+else alert(`La parola "${userWord}" non è palindroma.`);
+
+
+function isStringPalindrome(string) {
+  const str = string.toLowerCase();
+  
+  const reversedStr = str.split('').reverse().join('');
+
+  return str === reversedStr;
 };
