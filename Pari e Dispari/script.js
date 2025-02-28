@@ -23,12 +23,21 @@ function startNumGame(numType) {
       continue;
     };
 
-    const computeNum = getRandomNumber(1, 5);
+    const computerNum = getRandomNumber(1, 5);
 
+    const finalNum = userNumInput + computerNum;
+    
+    alert(isUserWinner(userNumInput, finalNum));
+    return isGameInProgress = false;
   };
   
 };
 
+
+function isUserWinner(userInput, finalNum) {
+  return userInput === 0 && !finalNum % 2 ? true :
+    userInput === 1 && finalNum % 2 ? true : false
+};
 
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
