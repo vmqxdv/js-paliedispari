@@ -11,7 +11,7 @@
 */
 
 function startNumGame(numType) {
-  
+
   let isGameInProgress = true;
 
   while (isGameInProgress) {
@@ -26,17 +26,22 @@ function startNumGame(numType) {
     const computerNum = getRandomNumber(1, 5);
 
     const finalNum = userNumInput + computerNum;
-    
+
     console.log(finalNum, isUserWinner(numType, finalNum));
     return isGameInProgress = false;
   };
-  
+
 };
 
 
 function isUserWinner(userInput, finalNum) {
-  return userInput === 0 && finalNum % 2 === 0 ? true :
-    userInput === 1 && finalNum % 2 !== 0 ? true : false
+  const isEven = finalNum % 2 === 0;
+  const isOdd = !isEven;
+
+  const userChoseEven = userInput === 0;
+  const userChoseOdd = userInput === 1;
+
+  return (userChoseEven && isEven) || (userChoseOdd && isOdd);
 };
 
 function getRandomNumber(min, max) {
