@@ -27,7 +27,7 @@ function startNumGame(numType) {
 
     const finalNum = userNumInput + computerNum;
     
-    console.log(isUserWinner(numType, finalNum));
+    console.log(finalNum, isUserWinner(numType, finalNum));
     return isGameInProgress = false;
   };
   
@@ -35,8 +35,8 @@ function startNumGame(numType) {
 
 
 function isUserWinner(userInput, finalNum) {
-  return userInput === 0 && !finalNum % 2 ? true :
-    userInput === 1 && finalNum % 2 ? true : false
+  return userInput === 0 && finalNum % 2 === 0 ? true :
+    userInput === 1 && finalNum % 2 !== 0 ? true : false
 };
 
 function getRandomNumber(min, max) {
