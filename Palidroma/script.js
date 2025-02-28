@@ -17,15 +17,13 @@ else alert(`La parola "${userWord}" non è palindroma.`);
 function isStringPalindrome(string) {
   const str = string.toLowerCase();
   
-  const splittedStr = str.split('');
+  const individualLettersToReverse = str.split('');
   
-  const reversedStrArr = [];
+  let reversedStr = '';
 
-  for (let i = splittedStr.length - 1; i >= 0; i--) {
-    reversedStrArr.push(splittedStr[i]);
+  for (let i = individualLettersToReverse.length - 1; i >= 0; i--) {
+    reversedStr += individualLettersToReverse[i];
   };
-
-  const reversedStr = reversedStrArr.join('');
 
   return str === reversedStr;
 };
