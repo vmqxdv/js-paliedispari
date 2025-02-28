@@ -23,6 +23,7 @@ function startNumGame(numType) {
       continue;
     };
 
+    const computeNum = getRandomNumber(1, 5);
 
   };
   
