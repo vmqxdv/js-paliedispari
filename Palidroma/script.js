@@ -21,7 +21,7 @@ function isStringPalindrome(string) {
   
   let reversedStr;
 
-  for (let i = splittedStr.length - 1; i > 0; i--) {
+  for (let i = splittedStr.length - 1; i >= 0; i--) {
     console.log(splittedStr[i]);
   };
 
