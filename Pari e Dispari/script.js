@@ -9,3 +9,9 @@
   Dichiariamo chi ha vinto.
 
 */
+
+function startNumGame(numType) {
+  
+  const userInput = prompt('Inserisci un numero da 1 a 5:');
+  
+};
