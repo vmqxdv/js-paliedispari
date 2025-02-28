@@ -12,6 +12,17 @@
 
 function startNumGame(numType) {
   
-  const userInput = Number(prompt('Inserisci un numero da 1 a 5:'));
+  let isGameInProgress = true;
+
+  while (isGameInProgress) {
+
+    const userInput = Number(prompt('Inserisci un numero da 1 a 5:'));
+
+    if (isNaN(userInput) || userInput > 5 || userInput < 1) {
+      alert(`Il numero "${userInput}", non è un numero valido. Riprova`);
+      continue;
+    };
+
+  };
   
 };
