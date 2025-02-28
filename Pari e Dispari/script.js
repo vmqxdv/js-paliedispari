@@ -27,7 +27,10 @@ function startNumGame(numType) {
 
     const finalNum = userNumInput + computerNum;
 
-    console.log(finalNum, isUserWinner(numType, finalNum));
+    const endGametext =
+      isUserWinner(numType, finalNum) ? 'Hai vinto!' : 'Hai perso...'
+
+    alert(endGametext + '\n\nClicca i bottoni se vuoi giocare ancora!');
     return isGameInProgress = false;
   };
 
