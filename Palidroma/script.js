@@ -8,3 +8,8 @@
 */
 
 const userWord = prompt('Scrivi una parola per verificare che essa sia palindroma:');
+
+
+function reverseString(string){
+  return string.split('').reverse().join('');
+};
