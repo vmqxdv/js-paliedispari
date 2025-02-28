@@ -19,10 +19,10 @@ function isStringPalindrome(string) {
   
   const splittedStr = str.split('');
   
-  let reversedStr;
+  const reversedStrArr = [];
 
   for (let i = splittedStr.length - 1; i >= 0; i--) {
-    console.log(splittedStr[i]);
+    
   };
 
   return str === reversedStr;
