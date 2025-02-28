@@ -22,8 +22,10 @@ function isStringPalindrome(string) {
   const reversedStrArr = [];
 
   for (let i = splittedStr.length - 1; i >= 0; i--) {
-    
+    reversedStrArr.push(splittedStr[i]);
   };
+
+  console.log(reversedStrArr);
 
   return str === reversedStr;
 };
