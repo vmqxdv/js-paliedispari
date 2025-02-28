@@ -27,7 +27,7 @@ function startNumGame(numType) {
 
     const finalNum = userNumInput + computerNum;
     
-    alert(isUserWinner(userNumInput, finalNum));
+    console.log(isUserWinner(numType, finalNum));
     return isGameInProgress = false;
   };
   
